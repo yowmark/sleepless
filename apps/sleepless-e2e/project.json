@@ -1,0 +1,28 @@
+{
+  "root": "apps/sleepless-e2e",
+  "sourceRoot": "apps/sleepless-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/sleepless-e2e/cypress.json",
+        "devServerTarget": "sleepless:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "sleepless:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/sleepless-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["sleepless"]
+}
