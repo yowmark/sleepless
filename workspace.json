@@ -1,7 +1,6 @@
 {
   "version": 2,
   "projects": {
-    "sleepless": "apps/sleepless",
-    "sleepless-e2e": "apps/sleepless-e2e"
+    "sleepless": "apps/sleepless"
   }
 }
